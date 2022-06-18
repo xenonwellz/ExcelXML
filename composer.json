@@ -1,0 +1,17 @@
+{
+    "name": "xenonwellz/excel-xml",
+    "description": "Php Array to Excel packager",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Xenonwellz\\ExcelXml\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Obed",
+            "email": "xenonwellz@gmail.com"
+        }
+    ],
+    "require": {}
+}
