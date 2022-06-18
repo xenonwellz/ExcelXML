@@ -74,7 +74,7 @@ class ExcelXML
     public function sendWorkbook($filename)
     {
         if (!preg_match('/\.(xml|xls)$/', $filename)) :
-            throw new Exception('Filename mimetype must be .xml or .xls');
+            throw new \Exception('Filename mimetype must be .xml or .xls');
         endif;
         $filename = $this->getWorkbookTitle($filename);
         $this->generateWorkbook();
@@ -103,10 +103,10 @@ class ExcelXML
         $this->generateWorkbook();
         $filename = $this->getWorkbookTitle($filename);
         if (!$handle = @fopen($path . $filename, 'w+')) :
-            throw new Exception(sprintf("Not allowed to write to file %s", $path . $filename));
+            throw new \Exception(sprintf("Not allowed to write to file %s", $path . $filename));
         endif;
         if (@fwrite($handle, $this->sOutput) === false) :
-            throw new Exception(sprintf("Error writing to file %s", $path . $filename));
+            throw new \Exception(sprintf("Error writing to file %s", $path . $filename));
         endif;
         @fclose($handle);
         return sprintf("File %s written", $path . $filename);
